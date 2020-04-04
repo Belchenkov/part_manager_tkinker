@@ -56,11 +56,15 @@ def select_item(event):
 
 
 def remove_item():
-    print('remove')
+    db.remove(select_item[0])
+    populate_list()
 
 
 def clear_text():
-    print('clear')
+    part_entry.delete(0, END)
+    customer_entry.delete(0, END)
+    retailer_entry.delete(0, END)
+    price_entry.delete(0, END)
 
 
 # Create window object
